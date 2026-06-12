@@ -1,0 +1,11 @@
+ticket_id,ticket_subject,ticket_priority,inferred_severity_label,mismatch_pred,mismatch_confidence,mismatch_type
+ADV001,Small question about my account,Low,Medium,0,1.7996166481158613e-07,Consistent
+ADV002,URGENT URGENT URGENT — help!!!! 😱😱😱,Critical,Low,1,0.9999998400639687,False Alarm
+ADV003,Follow-up on previous discussion,Medium,Critical,1,0.9999909650670422,Hidden Crisis
+ADV004,System performance seems a little sluggish sometimes,Low,Critical,1,0.9999999221273507,Hidden Crisis
+ADV005,Critical Critical Critical system failure!!!! Data corruption!!!!!,Critical,Low,1,0.9999998442009513,False Alarm
+ADV006,Routine maintenance check notification,Low,High,1,0.9999997474621427,Hidden Crisis
+ADV007,Question about API documentation,Medium,Medium,0,9.40456045177591e-08,Consistent
+ADV008,Super important: need help ASAP with critical priority issue IMMEDIATELY,Critical,High,0,2.8925624786852595e-06,Consistent
+ADV009,Checking in on a feature,Low,High,1,0.9999999186221282,Hidden Crisis
+ADV010,Minor usability feedback — not urgent,Low,Low,0,1.77513616721146e-07,Consistent

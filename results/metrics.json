@@ -1,0 +1,11 @@
+{
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "recall_consistent": 1.0,
+  "recall_mismatch": 1.0,
+  "threshold": 0.3,
+  "thresholds_passed": true,
+  "n_total": 20000,
+  "n_mismatch": 3716,
+  "mismatch_rate": 0.1858
+}

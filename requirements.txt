@@ -1,0 +1,50 @@
+# Core ML
+torch==2.2.2
+transformers==4.41.2
+peft==0.11.1
+datasets==2.19.2
+accelerate==0.30.0
+bitsandbytes
+
+# Sentence Transformers & Clustering
+sentence-transformers==3.0.1
+scikit-learn==1.5.0
+umap-learn==0.5.6
+
+# NLP & Text
+nltk==3.8.1
+spacy==3.7.4
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
+# Gradient Boosting (resolution-time regression)
+xgboost==2.0.3
+lightgbm==4.3.0
+
+# Data Handling
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.13.0
+
+# Evaluation
+rouge-score==0.1.2
+evaluate==0.4.2
+
+# Visualization
+plotly==5.22.0
+matplotlib==3.9.0
+seaborn==0.13.2
+
+# Streamlit App
+streamlit==1.35.0
+streamlit-aggrid==1.0.5
+
+# Utilities
+python-dotenv==1.0.1
+tqdm==4.66.4
+jsonschema==4.22.0
+kaggle==1.6.14
+imbalanced-learn==0.12.3
+
+# Notebook
+ipykernel==6.29.4
+ipywidgets==8.1.3
