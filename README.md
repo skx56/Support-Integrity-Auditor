@@ -40,6 +40,16 @@ flowchart LR
   Pseudo --> Classifier["Mismatch Classifier"]
   Classifier --> Dossier["Audit Dossier"]
   Dossier --> Dashboard["Streamlit Review Dashboard"]
+
+  classDef inputs fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2px;
+  classDef process fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2px;
+  classDef data fill:#CCFBF1,stroke:#0D9488,color:#134E4A,stroke-width:2px;
+  classDef agent fill:#FCE7F3,stroke:#DB2777,color:#831843,stroke-width:2px;
+  classDef output fill:#FEF9C3,stroke:#CA8A04,color:#713F12,stroke-width:2px;
+  class Tickets,Signals,Semantic,Rules,Regression,Pseudo,Dossier process;
+  class Classifier agent;
+  class Dashboard output;
+  linkStyle default stroke:#475569,stroke-width:2px;
 ```
 
 ## Technology Stack
