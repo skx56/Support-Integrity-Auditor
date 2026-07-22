@@ -29,11 +29,12 @@ The pipeline separates signal generation, staged modeling, dossier creation, das
 ## Architecture Diagram
 
 ```mermaid
-flowchart LR
+%%{init: {"flowchart": {"nodeSpacing": 55, "rankSpacing": 70, "curve": "basis"}, "themeVariables": {"fontSize": "16px", "fontFamily": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"}}}%%
+flowchart TD
   Tickets["Support Ticket Data"] --> Signals["Signal Extraction"]
   Signals --> Semantic["Embedding Cluster Signals"]
   Signals --> Rules["NLP Rule Signals"]
-  Signals --> Regression["Resolution Regression Signals"]
+  Signals --> Regression["Resolution Regression<br/>Signals"]
   Semantic --> Pseudo["Pseudo-Label Stage"]
   Rules --> Pseudo
   Regression --> Pseudo
@@ -41,15 +42,15 @@ flowchart LR
   Classifier --> Dossier["Audit Dossier"]
   Dossier --> Dashboard["Streamlit Review Dashboard"]
 
-  classDef inputs fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2px;
-  classDef process fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2px;
-  classDef data fill:#CCFBF1,stroke:#0D9488,color:#134E4A,stroke-width:2px;
-  classDef agent fill:#FCE7F3,stroke:#DB2777,color:#831843,stroke-width:2px;
-  classDef output fill:#FEF9C3,stroke:#CA8A04,color:#713F12,stroke-width:2px;
+  classDef inputs fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2.5px;
+  classDef process fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2.5px;
+  classDef data fill:#CCFBF1,stroke:#0D9488,color:#134E4A,stroke-width:2.5px;
+  classDef agent fill:#FCE7F3,stroke:#DB2777,color:#831843,stroke-width:2.5px;
+  classDef output fill:#FEF9C3,stroke:#CA8A04,color:#713F12,stroke-width:2.5px;
   class Tickets,Signals,Semantic,Rules,Regression,Pseudo,Dossier process;
   class Classifier agent;
   class Dashboard output;
-  linkStyle default stroke:#475569,stroke-width:2px;
+  linkStyle default stroke:#475569,stroke-width:2.5px;
 ```
 
 ## Technology Stack
