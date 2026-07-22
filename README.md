@@ -26,6 +26,22 @@ Support Integrity Auditor turns support-ticket data into actionable quality sign
 
 The pipeline separates signal generation, staged modeling, dossier creation, dashboard presentation, and training scripts. This structure keeps experimentation, prediction, and review surfaces independently maintainable.
 
+## Architecture Diagram
+
+```mermaid
+flowchart LR
+  Tickets["Support Ticket Data"] --> Signals["Signal Extraction"]
+  Signals --> Semantic["Embedding Cluster Signals"]
+  Signals --> Rules["NLP Rule Signals"]
+  Signals --> Regression["Resolution Regression Signals"]
+  Semantic --> Pseudo["Pseudo-Label Stage"]
+  Rules --> Pseudo
+  Regression --> Pseudo
+  Pseudo --> Classifier["Mismatch Classifier"]
+  Classifier --> Dossier["Audit Dossier"]
+  Dossier --> Dashboard["Streamlit Review Dashboard"]
+```
+
 ## Technology Stack
 
 - PyTorch, Transformers, PEFT, and sentence-transformers for language modeling workflows.
